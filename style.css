@@ -39,7 +39,44 @@ nav {
 }
 main {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem;
+    gap:1.5rem;
 }
 footer {
     bottom: 0;
+}
+nav a, nav a:visited {
+    color:#000;
+}
+nav a:hover, nav a:focus {
+    color:steelblue;
+}
+.card {
+    background-color: lightslategray;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:min(100%, 350px);
+    scroll-margin-top: 10rem;
+}
+.card figure {
+    display: flex;
+    flex-direction: column; 
+}
+
+.card figurecaption {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+}
+.card img {
+    border: 5px double #333;
+    border-radius:50%;
 }
