@@ -11,6 +11,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
@@ -55,7 +59,7 @@ nav a:hover, nav a:focus {
     color:steelblue;
 }
 .card {
-    background-color: lightslategray;
+    background-color:#333;
     border: 2px solid #000;
     border-radius: 15px;
     padding: 1rem;
@@ -65,9 +69,9 @@ nav a:hover, nav a:focus {
     width:min(100%, 350px);
     scroll-margin-top: 10rem;
 }
-.card figure {
+.card figure { 
     display: flex;
-    flex-direction: column; 
+    flex-flow: column; 
 }
 
 .card figurecaption {
@@ -75,8 +79,41 @@ nav a:hover, nav a:focus {
     font-weight: bolder;
     font-size: 2rem;
     margin: 1rem;
+    color: #fff
 }
 .card img {
     border: 5px double #333;
     border-radius:50%;
+}
+.card q {
+    color:#fff
+}
+
+/* || SMALL */
+@media screen and (min-width:576px) {
+    main {
+        justify-content: center;
+        flex-direction: row;
+    }
+    .card {
+        width:min(100%, 500px);
+    }
+}
+/* || MEDIUM */
+@media screen and (min-width:768px) {
+    nav {
+        display:block;
+    }
+    .card {
+        background-color: #1e293b;
+    }
+    .card figure {
+        flex-flow: column-reverse;
+    }
+}
+/* || LARGE */
+@media screen and (min-width:992px) {
+    .card img {
+        border-radius:0%;
+    }
 }
