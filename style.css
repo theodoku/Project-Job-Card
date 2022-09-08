@@ -71,9 +71,28 @@ nav a:hover, nav a:focus {
 }
 .card figure { 
     display: flex;
-    flex-flow: column; 
+    flex-direction: column; 
 }
-
+.card figurecaption::first-letter {
+    font-size: 3rem;
+}
+.card p {
+    position:relative;
+}
+.card p::before {
+    content:open-quote;
+    position:absolute;
+    font-size: 2rem;
+    top:-0.30em;
+    left:-0.40em;
+}
+.card p::after {
+    content:close-quote;
+    position:absolute;
+    font-size: 2rem;
+    top:-0.30em;
+    right:-0.40em;
+}
 .card figurecaption {
     text-align: center;
     font-weight: bolder;
@@ -81,11 +100,12 @@ nav a:hover, nav a:focus {
     margin: 1rem;
     color: #fff
 }
+
 .card img {
     border: 5px double #333;
     border-radius:50%;
 }
-.card q {
+.card p {
     color:#fff
 }
 
@@ -108,7 +128,7 @@ nav a:hover, nav a:focus {
         background-color: #1e293b;
     }
     .card figure {
-        flex-flow: column-reverse;
+        flex-direction: column;
     }
 }
 /* || LARGE */
